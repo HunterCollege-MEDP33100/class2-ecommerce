@@ -1,0 +1,172 @@
+.logo-container img {
+  height: 500px; /* Adjust this to scale your logo */
+  width: auto; /* Keeps the aspect ratio */
+}
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(85, 60, 145);
+  align-items: center; /* this was added */
+  gap: 150px; /* this was added */
+  padding: 10px 0;
+}
+
+.disco-ball {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, #ccc, #666);
+  border-radius: 50%;
+  position: relative;
+  animation: spin 6s linear infinite, flash 1s infinite alternate;
+  box-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #0ff, 0 0 40px #ff0;
+  overflow: hidden;
+}
+
+/* Tile pattern overlay */
+.disco-ball::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 10px 10px; /* size of mirror tiles */
+  z-index: 2;
+  border-radius: 50%;
+}
+
+/* Optional highlight reflection */
+.disco-ball::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flash Animation */
+@keyframes flash {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.5);
+  }
+}
+
+/* The navigation bar container */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around; /* Even spacing */
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 10px 0; /* Add vertical padding */
+}
+
+/* Navigation Links */
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+/* Animate only on hover */
+.navbar a:hover {
+  animation: breathe 4s ease-in-out infinite;
+  color: gold;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.grid-row {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.grid-row h2 {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.grid-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push label to the bottom */
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.grid-content img {
+  flex-grow: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin-top: 5px;
+  padding: 4px 8px;
+  text-align: center;
+  width: 100%;
+}
