@@ -7,12 +7,11 @@ body {
     display: grid;
     grid-template:
         'title nav nav'
+        'roll roll roll'
         'header header header'
-        'section section section'
-        'section section section'
-        'section section section'
+        'essential essential essential'
+        'seasonal seasonal seasonal'
         'footer footer footer';
-    background-color: #c4ccd2;
 }
 
 .grid-container>* {
@@ -21,27 +20,27 @@ body {
 
 h1 {
     grid-area: title;
-    background: rgb(130, 130, 203);
+    padding: 1em;
 }
 
 nav {
     grid-area: nav;
-    background: rgb(167, 167, 204);
+    background: rgb(255, 255, 255);
+    justify-content: right;
 }
 
 h1,
 nav {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-a {
+nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
-a:hover {
+nav a:hover {
     color: blue;
 }
 
@@ -50,20 +49,87 @@ li {
     padding-right: 3em;
 }
 
+.roll {
+    grid-area: roll;
+    font-size: smaller;
+    background: rgb(207, 228, 245);
+}
+
 .headerimg {
     grid-area: header;
     max-width: 100%;
     height: 30em;
-    background: url(images/default/1194px-Nassarius_bellulus_01.JPG) center/cover no-repeat fixed;
+    background: black url(images/default/Acar_abdita_01.jpg) center/90% no-repeat;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: last baseline;
 }
 
-section {
-    grid-area: section;
+.headerimg a {
+    color: white;
+}
+
+.border1, .border2 {
+    flex: 0 0 100%;
+    padding: 1em;
+}
+
+.border1 {
+    background: red;
+}
+
+.border2 {
+    background: blue;
+}
+
+.essential {
+    grid-area: essential;
+}
+
+.seasonal {
+    grid-area: seasonal;
+}
+
+.item,
+.essential,
+.seasonal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    flex: 1 1 20%;
+    max-width: 30rem;
+    padding: 1em;
+}
+
+img {
+    width: 15em;
+    height: auto;
+    flex: 0 0 100%;
+}
+
+.desc {
+    flex: 0 0 100%;
+}
+
+.price {
+    font-size: smaller;
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
     grid-area: footer;
-    background: red;
+}
+
+h1, footer {
+    background: rgb(0, 0, 0);
+    color: white
 }
 
 @media screen and (max-width: 700px) {
@@ -74,18 +140,19 @@ footer {
             'title title title'
             'nav nav nav'
             'header header header'
-            'section section section'
-            'section section section'
-            'section section section'
+            'essential essential essential'
+            'seasonal seasonal seasonal'
+            'roll roll roll'
             'footer footer footer';
-        background-color: #c4ccd2;
     }
 
     .headerimg {
         grid-area: header;
         max-width: 100%;
         height: 20em;
-        background: url(images/default/1194px-Nassarius_bellulus_01.JPG) center/cover no-repeat;
+        background: url(images/default/Acar_abdita_01.jpg) center/cover no-repeat;
+
+        color: white;
     }
 
 }
