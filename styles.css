@@ -1,15 +1,51 @@
 .logo-container img {
-  height: 500px; /* Adjust this to scale your logo */
-  width: auto; /* Keeps the aspect ratio */
+  max-height: 30vh; /* responsive to screen height */
+  width: auto;
 }
-/* Logo */
+
 .logo-container {
   display: flex;
   justify-content: center;
-  background-color: rgb(85, 60, 145);
-  align-items: center; /* this was added */
-  gap: 150px; /* this was added */
+  align-items: center;
+  background: rgb(85, 60, 145); /* fallback */
+  position: relative; /* enable pseudo-element positioning */
+  overflow: hidden;
+  gap: 150px;
   padding: 10px 0;
+}
+
+/* Animated lighting effect */
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+      circle,
+      rgba(255, 0, 255, 0.3) 10%,
+      transparent 70%
+    ),
+    radial-gradient(circle, rgba(0, 255, 255, 0.3) 10%, transparent 70%),
+    radial-gradient(circle, rgba(255, 255, 0, 0.3) 10%, transparent 70%);
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  animation: move-lights 10s linear infinite;
+  z-index: 0;
+}
+
+/* Keyframes to animate background movement */
+@keyframes move-lights {
+  0% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
+  50% {
+    background-position: 100% 0%, 0% 100%, 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
 }
 
 .disco-ball {
@@ -130,7 +166,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
 }
 
@@ -138,7 +174,6 @@
   position: relative;
   width: 100%;
   padding-top: 100%; /* 1:1 aspect ratio */
-  background-color: #eee;
   overflow: hidden;
 }
 
@@ -148,18 +183,18 @@
   left: 0;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Push label to the bottom */
+  justify-content: center; /* Center image vertically */
   align-items: center;
   padding: 10px;
-  box-sizing: border-box;
 }
 
 .grid-content img {
-  flex-grow: 1;
-  width: 100%;
-  object-fit: cover;
+  max-height: 80%; /* Prevent overflowing vertically */
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .image-label {
@@ -169,4 +204,43 @@
   padding: 4px 8px;
   text-align: center;
   width: 100%;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-row h2 {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .logo-container img {
+    max-height: 20vh;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .disco-ball {
+    width: 80px;
+    height: 80px;
+  }
 }
