@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   background-color: #fdf6e3;
 }
 
@@ -144,6 +144,7 @@ nav {
 .product h3 {
   font-size: 18px;
   margin: 10px 0;
+
 }
 
 .product .price {
