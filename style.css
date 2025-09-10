@@ -111,6 +111,47 @@ nav {
 }
 
 /* ------------------------
+   PRODUCT SECTION
+   ------------------------ */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product .price {
+  font-size: 16px;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* ------------------------
    RESPONSIVE MEDIA QUERIES
    ------------------------ */
 
@@ -131,6 +172,11 @@ nav {
 
   .content p {
     font-size: 18px;
+  }
+
+  /* Products adjust to 2 columns */
+  .products {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -166,4 +212,54 @@ nav {
   .content p {
     font-size: 16px;
   }
+
+  /* Products adjust to 1 column */
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+/* Product section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product .price {
+  font-size: 16px;
+  color: #f39c12;
+  font-weight: bold;
 }
