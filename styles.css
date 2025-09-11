@@ -116,17 +116,31 @@ section img{
 
 
 main{
+    display: flex;
     background-color: var(--main-background-color);
     flex: 1 1 100%;
     order: 3;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     max-width: 1500px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+.img_box_containter {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+main img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+.text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 main .cart-button button{
     cursor: pointer;
@@ -177,9 +191,6 @@ footer .footer_column{
 
 
 
-
-
-
 @media (max-width:720px) {
 
     header{
@@ -196,4 +207,48 @@ footer .footer_column{
         visibility: hidden;
     }
 
+    section h2{
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width: 1900px){
+    header .search_container{
+    margin-left: -25rem;
+    }
+}
+
+
+@media (max-width: 1800px){
+    header .search_container{
+    margin-left: -23rem;
+    }
+}
+
+@media (max-width: 1700px){
+    header .search_container{
+    margin-left: -10rem;
+    }
+}
+
+
+@media (max-width: 1300px) {
+        section h2{
+        white-space: nowrap;
+        font-size: 25px;
+    }
+
+        header .search_container{
+    margin-left: 0rem;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    section h2{
+        white-space: nowrap;
+        font-size: 25px;
+    }
 }
