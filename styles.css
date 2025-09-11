@@ -284,6 +284,19 @@ a:focus-visible, .btn:focus-visible {
   color: var(--accent-magenta);
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
+/*secAccents*/
+.section-head{
+  position:relative;
+  text-align:center;
+  margin: 1.25rem 0 .9rem;
+}
+.section-head::after{
+  content:"";
+  display:block;
+  width: 180px; height: 2px; margin: .6rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  filter: drop-shadow(0 0 8px rgba(102,233,255,.45));
+}
 /*siteFooter*/
 .site-footer{
   padding: 1.25rem 0 2rem;
