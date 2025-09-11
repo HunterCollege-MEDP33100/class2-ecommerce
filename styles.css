@@ -27,7 +27,7 @@
 /*base*/
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: var(--bg, #111);
   color: var(--text);
   line-height: 1.5;
 }
@@ -40,11 +40,13 @@ body {
 }
 
 /*siteHeader*/
-.site-header {
+.site-header{
   position: sticky;
   top: 0;
-  z-index: 10;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  z-index: 100;                           
+  background: var(--panel);               
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 2px 12px rgba(0,0,0,.4);  
 }
 
 .brand {
