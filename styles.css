@@ -6,12 +6,13 @@ body {
 .grid-container {
     display: grid;
     grid-template:
-        'title nav nav'
-        'roll roll roll'
-        'header header header'
-        'essential essential essential'
-        'seasonal seasonal seasonal'
-        'footer footer footer';
+        'title title nav nav'
+        'roll roll roll roll'
+        'i1 i1 i1 t1'
+        'essential essential essential essential'
+        't2 i2 i2 i2'
+        'seasonal seasonal seasonal seasonal'
+        'footer footer footer footer';
 }
 
 .grid-container>* {
@@ -20,7 +21,27 @@ body {
 
 h1 {
     grid-area: title;
-    padding: 1em;
+    padding: 1rem;
+    background: url(images/seafoam.jpg) top/cover no-repeat;
+    color: rgb(255, 255, 255)
+}
+
+h1, h2 {
+    font-size: 3rem;
+}
+
+h1,
+h2 {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p,
+li {
+    font-family: "Charis SIL", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
@@ -40,10 +61,6 @@ nav a {
     color: rgb(0, 0, 0);
 }
 
-nav a:hover {
-    color: blue;
-}
-
 li {
     display: inline;
     padding-right: 3em;
@@ -51,36 +68,68 @@ li {
 
 .roll {
     grid-area: roll;
-    font-size: smaller;
     background: rgb(207, 228, 245);
+    padding: 0em 1em;
+    font-size: smaller;
+    text-align: center;
 }
 
 .headerimg {
-    grid-area: header;
-    max-width: 100%;
-    height: 30em;
+    grid-area: i1;
     background: black url(images/default/Acar_abdita_01.jpg) center/90% no-repeat;
 
+    color: white;
     display: flex;
-    justify-content: flex-end;
     align-items: last baseline;
+    padding: 0em 1em;
 }
 
-.headerimg a {
+.headerimg a, .secondimg a {
     color: white;
 }
 
-.border1, .border2 {
-    flex: 0 0 100%;
+.headertxt {
+    grid-area: t1;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/border1.jpg) center/cover no-repeat fixed;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    color: white;
     padding: 1em;
+    height: 25em;
 }
 
-.border1 {
-    background: red;
+.bdesc {
+    width: 15em;
 }
 
-.border2 {
-    background: blue;
+.secondtxt {
+    grid-area: t2;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/border2.jpg) right/cover no-repeat fixed;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    height: 25em;
+}
+
+.secondimg {
+    grid-area: i2;
+    background: black url(images/seasonal/Cochlorina_lateralis_01.JPG) center/90% no-repeat;
+
+    color: white;
+    display: flex;
+    align-items: last baseline;
+    padding: 0em 1em;
 }
 
 .essential {
@@ -109,10 +158,18 @@ img {
     width: 15em;
     height: auto;
     flex: 0 0 100%;
+
+    border-radius: 1em;
+}
+
+h2 {
+    color: white;
+    transition: color 0.2s;
 }
 
 .desc {
     flex: 0 0 100%;
+    line-height: 1rem;
 }
 
 .price {
@@ -121,18 +178,26 @@ img {
 
 a {
     text-decoration: none;
+    color: black;
+    transition: color 0.2s;
+}
+
+a:hover, h2:hover {
+    color: rgb(42, 162, 242);
 }
 
 footer {
     grid-area: footer;
+    padding: 1em;
+
 }
 
-h1, footer {
-    background: rgb(0, 0, 0);
-    color: white
+footer {
+    background: black;
+    color: white;
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
 
     .grid-container {
         display: grid;
@@ -140,7 +205,9 @@ h1, footer {
             'title title title'
             'nav nav nav'
             'header header header'
+            'b1 b1 b1'
             'essential essential essential'
+            'b2 b2 b2'
             'seasonal seasonal seasonal'
             'roll roll roll'
             'footer footer footer';
@@ -155,4 +222,4 @@ h1, footer {
         color: white;
     }
 
-}
+} */
