@@ -32,35 +32,45 @@ body{
 }
 
 #wrapper>*{
-    padding: 20px;
+    padding: 30px;
 }
 
 header{
     background-color: var(--header-background-color);
     flex: 1 0 100%;
     order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 header .search_container{
-    display: flex;
-    flex-direction: row;
+    padding: 30px;
 }
 
 header ul{
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    align-items: center;
+    gap: 20px; 
 }
 
 header ul li{
     list-style: none;
+    font-weight: normal;
+    font-size: 20px;
+    transition: transform .02s ease-in;
 }
 
 header ul li:hover{
     text-transform: bold;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.5s;
+    transform: scale(1.07);
+}
+
+header .cart{
+    border: solid black;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 main{
