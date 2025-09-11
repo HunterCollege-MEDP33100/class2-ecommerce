@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casual Shorts - HaNGER</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .product-detail img {
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .product-detail h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .product-detail .price {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .product-detail button {
+      background-color: #000;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .product-detail button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Store logo"></a>
+    </div>
+
+    <div class="menu">
+      <a href="index.html"><i class="fas fa-home"></i></a>
+      <a href="index.html"><i class="fas fa-search"></i></a>
+
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="aboutus.html">About Us</a>
+          <a href="customerservice.html">Customer Service</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product detail -->
+  <section class="product-detail">
+    <img src="casualshorts.png" alt="Casual Shorts">
+    <h2>Casual Shorts</h2>
+    <p class="price">$11.99</p>
+    <button>Buy</button>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn, .dropbtn *')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].classList.remove("show");
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

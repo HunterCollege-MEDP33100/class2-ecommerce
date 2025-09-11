@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS';
+  background-color: #fdf6e3;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #222;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+  transition: opacity 0.3s;
+}
+.logo img:hover {
+  opacity: 0.8;
+}
+
+/* Main menu */
+.menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.menu a i {
+  margin-right: 8px;
+}
+
+.menu a:hover {
+  color: #f39c12;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.dropbtn:hover {
+  color: #f39c12;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+/* Show active dropdown */
+.show {
+  display: block;
+}
+
+/* Main content */
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 48px;
+}
+
+.content p {
+  font-family: cursive;
+  font-size: 20px;
+}
+
+/* Product section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product .price {
+  font-size: 16px;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.product a {
+  color: inherit;
+  text-decoration: none;
+}
+.product a:visited,
+.product a:hover,
+.product a:active {
+  color: inherit;
+}
+
+/* Tablets (medium screens) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .products {
+    max-width: 900px;
+  }
+}
+
+/* Phones (small screens) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .menu a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .dropbtn {
+    margin-left: auto;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .products {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+

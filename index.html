@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HaNGER</title>
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Store logo">
+      </a>
+    </div>
+
+    <!-- Menu links -->
+    <div class="menu">
+      <a href="index.html"><i class="fas fa-home"></i></a>
+      
+      <!-- Search -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+      </div>
+
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="aboutus.html">About Us</a>
+          <a href="customerservice.html">Customer Service</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="content">
+    <h1>HaNGER</h1>
+    <p>- It’s not about the price, it’s about the style -</p>
+  </div>
+
+  <!-- Product section -->
+  <section class="products">
+    <div class="product">
+      <a href="product1.html">
+        <img src="blazerw.png" alt="Black Blazer">
+        <h3>Black Deer Blazer</h3>
+        <p class="price">$39.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+  <a href="product2.html">
+    <img src="joggerw.png" alt="Black Jogger">
+    <h3>Black Jogger</h3>
+    <p class="price">$15.99</p>
+  </a>
+</div>
+
+    <div class="product">
+        <a href="product3.html">
+      <img src="shoesw.png" alt="Product 3">
+      <h3>Black Shoes</h3>
+      <p class="price">$29.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product4.html">
+      <img src="sweaterw.png" alt="Product 4">
+      <h3>Black Honey Sweater</h3>
+      <p class="price">$19.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product5.html">
+      <img src="hoodiew.png" alt="Product 5">
+      <h3>Bloody Hoodie</h3>
+      <p class="price">$24.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+         <a href="product6.html">
+      <img src="jacketw.png" alt="Product 6">
+      <h3>Black Jacket</h3>
+      <p class="price">$29.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product7.html">
+      <img src="shirtm.png" alt="Product 7">
+      <h3>Sunny Shirt</h3>
+      <p class="price">$19.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product8.html">
+      <img src="jacketonfire.png" alt="Product 8">
+      <h3>Jacket on Fire</h3>
+      <p class="price">$29.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product9.html">
+      <img src="skycoat.png" alt="Product 9">
+      <h3>Coat by The Clouds</h3>
+      <p class="price">$39.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+         <a href="product10.html">
+      <img src="graffitijeans.png" alt="Product 10">
+      <h3>Graffiti Jeans</h3>
+      <p class="price">$29.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product11.html">
+      <img src="jeansonfire.png" alt="Product 11">
+      <h3>Jeans on Fire</h3>
+      <p class="price">$29.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product12.html">
+      <img src="casualshorts.png" alt="Product 12">
+      <h3>Casual Shorts</h3>
+      <p class="price">$11.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product13.html">
+      <img src="hankertshirt.png" alt="Product 13">
+      <h3>HaNKER Tshirt</h3>
+      <p class="price">$11.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product14.html">
+      <img src="hankerjeans.png" alt="Product 14">
+      <h3>HaNKER Jeans</h3>
+      <p class="price">$15.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+         <a href="product15.html">
+      <img src="hankhat.png" alt="Product 15">
+      <h3>HaNKER Cap</h3>
+      <p class="price">$9.99</p>
+      </a>
+    </div>
+
+    <div class="product">
+        <a href="product16.html">
+      <img src="totebag.png" alt="Product 16">
+      <h3>HaNKER Tote Bag</h3>
+      <p class="price">$6.99</p>
+    </a>
+    </div>
+  </section>
+
+  <!-- Dropdown script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    // Close menu if user clicks outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn, .dropbtn *')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].classList.remove("show");
+        }
+      }
+    }
+
+    // Product search
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+
+      products.forEach(product => {
+        const name = product.querySelector("h3").textContent.toLowerCase();
+        if(name.includes(input)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(e) {
+      if(e.key === "Enter") {
+        searchProducts();
+      }
+    });
+  </script>
+
+</body>
+</html>
