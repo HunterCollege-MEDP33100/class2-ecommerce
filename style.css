@@ -1,12 +1,12 @@
 :root {
-  --primary-bg: #FFFDEC;   
-  --header-footer: #86A788;  
-  --card-bg: #FFE2E2;        
-  --accent1: #FFCFCF;       
-  --accent2: #FFE2E2;        
-  --text-dark: #FFFDEC;         
-  --text-light: #ffffff;     
-  --secondary: #FFFDEC;      
+    --primary-bg: #FFFDEC;
+    --header-footer: #86A788;
+    --card-bg: #FFE2E2;
+    --accent1: #FFCFCF;
+    --accent2: #FFE2E2;
+    --text-dark: #FFFDEC;
+    --text-light: #ffffff;
+    --secondary: #FFFDEC;
 }
 
 body {
@@ -88,7 +88,7 @@ h3 {
 
 .hero-text h1,
 .hero-text p {
-  color: #F4C2C2; 
+    color: #F4C2C2;
 }
 
 
