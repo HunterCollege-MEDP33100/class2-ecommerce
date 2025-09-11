@@ -1,0 +1,233 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-style: italic;
+    background-color: #fafafa;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, .logo {
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+  }
+  
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(#ffcbef,#fffdfe,#ffd8fc);
+    border-bottom: 0px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-style: normal; 
+  }
+  
+  
+  .nav-bar a:hover {
+    color: #a45d8d;
+  }
+  
+ 
+  .hero {
+    height: 70vh;
+    background-image: url("images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-text {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #a45d8d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background: #7b416a;
+  }
+  
+
+.products {
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .products h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(157, 26, 109, 0.08);
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .about {
+    padding: 60px 40px;
+    text-align: center;
+    background: linear-gradient(#dfb6d2,#fafafa,#ffb6e9);
+    border-top: 0px solid #ddd;
+    border-bottom: 0px solid #ddd;
+  }
+  
+
+  .site-footer {
+    background: #ff94ef;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .moving-text {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .moving-text p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: move-left 20s linear infinite;
+  }
+  
+  @keyframes move-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .footer-bottom {
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+  
+ 
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .site-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-bar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero {
+      height: 50vh;
+    }
+  
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+.hero h1 {
+    font-size: 2.5rem;
+    overflow: hidden;              
+    white-space: nowrap;           
+    border-right: 3px solid #a45d8d; 
+    width: 0;                      
+    animation: typing 4s steps(30, end) forwards,
+               blink 0.7s step-end infinite;
+  }
+  
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #a45d8d }
+  }
+  
+  
+  
