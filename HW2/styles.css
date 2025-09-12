@@ -1,0 +1,182 @@
+/* START border-box fix */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  /* END border-box fix */
+
+  body{
+    padding: 0;
+    margin: 0;
+    background-color: #212121;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+  
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      text-transform: uppercase;
+      margin: 0;
+      text-align: center;
+  }
+
+h1{
+color:#6088a5
+}
+  #wrapper{
+    margin: 0px auto;
+    /* centers wrapper*/
+    background-color: rgb(255, 255, 255);
+    color:#000000; 
+    max-width: 1000px;
+    /* display: flex;
+     flex-wrap: wrap; */
+     
+  }
+
+  header{
+    background-color: #212121;
+   flex: 1 0 100%; 
+    padding: 58px;
+    text-align: center;
+  }
+    .spin {
+      border-radius: 0%;
+      transition: transform .8s ease-in-out;
+              transition: transform .8s ease-in-out;
+    }
+    .spin:hover {
+    transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+
+  nav{
+    background-color: #d7e1f2;
+        flex: 1 0 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    /* grown but do not shrink less than basis*/
+  }
+
+nav li{
+  display: inline-block;
+  margin: 0px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+  nav a{
+    text-decoration: solid;
+    color: #6088a5;
+  }
+
+  nav a:hover{
+    color: #212121;
+    width: auto;
+  }
+
+
+  main{
+    background-color: white;
+        padding:40px;
+        display: grid;
+        grid-column: 1 / 13;
+  
+  }
+  
+
+  aside{
+    background-color:#212121;
+        padding: 30px;
+       
+  }
+  aside p {
+    color:white;
+    text-decoration: solid;
+    text-align: center;
+  }
+
+aside p:hover{
+  color: #6088a5;
+  width: auto;
+}
+footer{
+    background-color: #212121;
+        flex: 1 0 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 10px;
+    order: 5;
+  }
+
+
+  
+  /* grid css*/
+  .container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 80px;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .container > div {
+    background-color: white;
+    border: 0px;
+    padding: 0px;
+    height:260px;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Flex css*/
+  .flex-container {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+}
+
+.flex-container > div {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  font-size: 10px;
+}
+
+#myButton {
+  padding: 10px 20px;
+  background-color: #212121;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family:"Urbanist", sans-serif;
+  cursor: default;
+  align-self: center;
+}
+
+#myButton:hover {
+  background-color: #6088a5;
+}
+
+.center-button {
+  text-align: center;
+  margin-top: 20px;
+}
