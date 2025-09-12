@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW#2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    
+</head>
+<body>
+    <nav class = "frosted-paragraph">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>News</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+   <h1 id="two">Slumper</h1>
+    
+     <!-- Automatic Slideshow -->
+    <div class= "frosted-paragraph1">
+        <div class="fakeimg3">
+            <div class="w3-content w3-section" style="max-width:1100px; margin: auto;">
+                <img class="autoSlides w3-animate-fading center resized-img" src="Images/Photo1.jpg">
+                <img class="autoSlides w3-animate-fading center resized-img" src="Images/Photo3.jpg">
+                <img class="autoSlides w3-animate-fading center resized-img" src="Images/Photo4.jpg">
+                <img class="autoSlides w3-animate-fading center resized-img" src="Images/Photo2.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column frosted-paragraph">
+            <h2><center>Tired?</center></h2>
+            <p>
+                <center>
+                    Sleep isn’t just important—it’s your body’s free       
+                    trial of death, but with breakfast afterward.
+                </center>
+            </p>
+        </div>
+        <div class="column frosted-paragraph">
+            <h2><center>Couldn't Sleep?</center></h2>
+            <p>
+                <center>
+                    Skip it too often, and suddenly you’re paying interest
+                    in yawns, brain fog, and questionable life choices.
+                </center>
+            </p>
+        </div>
+        <div class="column frosted-paragraph">
+            <h2><center>Tired of that 9-5?</center></h2>
+            <p>
+                <center>
+                    Go to bed—your future self 
+                    will thank you… after the nap.
+                </center>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="twocolumn frosted-paragraph">
+            <h2>
+                <center>
+                    Bed 1
+                </center>
+            </h2>
+            <center>
+                <img src="Images/Bed1.jpg" class = "imgcolumn">
+            </center>
+        </div>
+        <div class="twocolumn frosted-paragraph">
+            <h2>
+                <center>
+                    Bed 2
+                </center>
+            </h2>
+                <center>
+                    <img src="Images/Bed2.jpg" class = "imgcolumn">
+                </center>
+        </div>
+    </div>
+
+     <!--
+
+    <div class ="frosted-paragraph fade-in1">
+        <h2 class = "one">Pro's</h2>
+            <ul>
+                <li>Free escape room for 8 hours.</li>
+
+                <li>Brain does nightly software updates.</li>
+
+                <li>Dreams = free Netflix, but with worse plotlines.</li>
+
+                <li>Zero chance of saying something embarrassing (unless you sleep talk).</li>
+
+                <li>Body fixes itself like it’s on auto-repair mode.</li>
+            </ul>  
+    </div>
+
+    <div class ="frosted-paragraph fade-in2">
+        <h2 class = "one">Con's</h2>
+            <ul>
+                <li>Takes up valuable scrolling time.</li>
+
+                <li>Alarm clocks exist.</li>
+
+                <li>Random dreams where you’re late to an exam you finished 5 years ago.</li>
+
+                <li>Can’t eat snacks while unconscious.</li>
+
+                <li>Waking up and realizing it’s Monday again.</li>
+            </ul>  
+    </div>-->
+    <script>
+        // Automatic slideshow
+        var autoIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("autoSlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        autoIndex++;
+        if (autoIndex > x.length) { autoIndex = 1 }
+        x[autoIndex - 1].style.display = "block";
+        setTimeout(carousel, 9000); // 9 seconds delay
+        }
+
+        // Sidebar controls
+        function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+</html>
